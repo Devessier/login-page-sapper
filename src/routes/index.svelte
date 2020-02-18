@@ -1,52 +1,26 @@
+<script>
+    const texts = [
+        {
+            important: true,
+            text: 'Welcome !',
+        },
+        {
+            text: 'This website is built with Sapper, Svelte and TailwindCSS.',
+        },
+        {
+            text: 'The only thing you can do is trying to sign in !',
+        },
+    ];
+</script>
+
 <svelte:head>
-    <title>Sapper project template</title>
+    <title>Home</title>
 </svelte:head>
 
-<h1>Great success!</h1>
-
-<figure>
-    <img alt="Borat" src="great-success.png" />
-    <figcaption>HIGH FIVE!</figcaption>
-</figure>
-
-<p>
-    <strong>
-        Try editing this file (src/routes/index.svelte) to test live reloading.
-    </strong>
-</p>
-
-<style>
-    h1,
-    figure,
-    p {
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    h1 {
-        font-size: 2.8em;
-        text-transform: uppercase;
-        font-weight: 700;
-        margin: 0 0 0.5em 0;
-    }
-
-    figure {
-        margin: 0 0 1em 0;
-    }
-
-    img {
-        width: 100%;
-        max-width: 400px;
-        margin: 0 0 1em 0;
-    }
-
-    p {
-        margin: 1em auto;
-    }
-
-    @media (min-width: 480px) {
-        h1 {
-            font-size: 4em;
-        }
-    }
-</style>
+{#each texts as { important, text }}
+    {#if important}
+        <h1 class="text-center text-4xl mt-5 mb-3">{text}</h1>
+    {:else}
+        <p class="text-center text-lg">{text}</p>
+    {/if}
+{/each}
