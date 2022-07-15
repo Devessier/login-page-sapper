@@ -26,7 +26,7 @@
         "postcss-cli": "^7.1.0",
         "prettier": "^2.0.4",
         "sapper": "^0.27.12",
-        "svelte": "^3.20.1",
+        "svelte": "^3.49.0",
         "svelte-loader": "^2.13.6",
         "svelte-preprocess-sass": "^0.2.0",
         "tailwindcss": "^1.2.0",
